@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>RAMMSTEIN - Feuer Player</title>
+</head>
+<body>
+    <header class="header">
+        <img src="rammstein-logo.png" class="logo" alt="Rammstein Logo">
+    </header>
+
+    <div class="container">
+        <div class="track-list" id="trackList"></div>
+    </div>
+
+    <div class="player-container">
+        <div id="player"></div>
+        <div class="controls">
+            <button onclick="playPrevious()">⏮</button>
+            <button onclick="togglePlay()">▶</button>
+            <button onclick="playNext()">⏭</button>
+            <input type="range" id="progress" class="industrial-slider" value="0">
+            <input type="range" id="volume" class="industrial-slider" min="0" max="100" value="100" onchange="setVolume(this.value)">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
